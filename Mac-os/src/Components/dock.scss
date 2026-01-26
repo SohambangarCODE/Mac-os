@@ -1,0 +1,97 @@
+.dock {
+  display: flex;
+  gap: 0.3rem;
+
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(110, 133, 181, 0.308);
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+
+  .dock-icon {
+    padding: 0.6rem;
+    display: flex;
+    margin-inline: 0.1rem;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.75rem;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+  }
+
+  .dock-icon .label {
+    color: white;
+    position: absolute;
+    bottom: 4rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dock-icon:hover .label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+  }
+
+  .github,
+  .cli {
+    background-color: black;
+  }
+  .spotify {
+    background: linear-gradient(
+      to bottom,
+      rgba(93, 253, 98, 0.867),
+      rgba(18, 248, 25, 0.889)
+    );
+  }
+  .pdf {
+    background: linear-gradient(
+      to bottom,
+      rgba(246, 11, 50, 0.867),
+      rgba(251, 86, 86, 0.889)
+    );
+  }
+  .calender,
+  .mail {
+    background: linear-gradient(to bottom, rgb(94, 126, 255), rgb(23, 15, 252));
+  }
+  .link {
+    background: linear-gradient(
+      to bottom,
+      rgb(163, 97, 170),
+      rgb(142, 33, 154)
+    );
+  }
+  .note {
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 179, 87),
+      rgb(255, 153, 28)
+    );
+  }
+  .dock-icon:hover {
+    transform: translateY(-20%) scale(1.15);
+  }
+  .dock-icon:hover + .dock-icon,
+  .dock-icon:has(+ .dock-icon:hover) {
+    transform: translateY(-10%) scale(1);
+  }
+
+  .dock-icon:hover .label {
+    opacity: 1;
+    visibility: visible;
+  }
+}
