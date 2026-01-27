@@ -1,11 +1,8 @@
 .window {
-  height: 500px;
-  width: 700px;
-
   background-color: #060606;
   border-radius: 0.75rem;
   overflow: hidden;
-
+  height: 100%;
   color: #eadbdb;
 
   font-family:
@@ -54,4 +51,7 @@
       }
     }
   }
+  .main-content{
+        height: 100%;
+    }
 }

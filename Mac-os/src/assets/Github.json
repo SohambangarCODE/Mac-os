@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=906&auto=format&fit=crop",
+    "title": "React Portfolio Website",
+    "description": "Personal portfolio website built using React and modern CSS.",
+    "tags": ["React", "TypeScript", "Chart.js", "Node.js", "Express", "MongoDB"],
+    "repoLink": "https://github.com/facebook/react",
+    "demoLink": "https://react.dev"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=906&auto=format&fit=crop",
+    "title": "JavaScript Weather App",
+    "description": "Weather application that fetches real-time data from an API.",
+    "tags": ["JavaScript", "API", "Frontend"],
+    "repoLink": "https://github.com/axios/axios",
+    "demoLink": "https://axios-http.com"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
+    "title": "Next.js Website",
+    "description": "Server-side rendered website built with Next.js.",
+    "tags": ["Next.js", "React", "Fullstack"],
+    "repoLink": "https://github.com/vercel/next.js",
+    "demoLink": "https://nextjs.org"  
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=906&auto=format&fit=crop",
+    "title": "Tailwind Landing Page",
+    "description": "Responsive landing page built using Tailwind CSS.",
+    "tags": ["Tailwind", "CSS", "UI"],
+    "repoLink": "https://github.com/tailwindlabs/tailwindcss",
+    "demoLink": "https://tailwindcss.com"
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=906&auto=format&fit=crop",
+    "title": "Node.js REST API",
+    "description": "Backend REST API built with Node.js and Express.",
+    "tags": ["Node.js", "Backend", "API"],
+    "repoLink": "https://github.com/nodejs/node",
+    "demoLink": "https://nodejs.org"
+  },
+  {
+    "id": 6,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=906&auto=format&fit=crop",
+    "title": "VS Code Extension",
+    "description": "Developer productivity extension for VS Code.",
+    "tags": ["VSCode", "Tool", "Extension"],
+    "repoLink": "https://github.com/microsoft/vscode",
+    "demoLink": "https://code.visualstudio.com"
+  },
+  {
+    "id": 7,
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
+    "title": "Learning Platform",
+    "description": "Online platform to learn web development.",
+    "tags": ["Education", "JavaScript"],
+    "repoLink": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "demoLink": null
+  },
+  {
+    "id": 8,
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=906&auto=format&fit=crop",
+    "title": "Admin Dashboard",
+    "description": "Modern admin dashboard with charts and analytics.",
+    "tags": ["Dashboard", "UI", "Charts"],
+    "repoLink": "https://github.com/vuejs/core",
+    "demoLink": "https://vuejs.org"
+  }
+]

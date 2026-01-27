@@ -1,7 +1,8 @@
 import "./app.scss";
 import Dock from "./Components/Dock";
 import Navbar from "./Components/Navbar";
-import MacWindow from "./Components/Windows/MacWindow";
+import Github from "./Components/Windows/Github";
+
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
       <Navbar />
       <Dock />
 
-      <MacWindow>
-        <h1>hellow</h1>
-      </MacWindow>
+      <Github />
     </main>
   );
 }
