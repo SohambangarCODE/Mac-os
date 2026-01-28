@@ -1,39 +1,57 @@
-import React from 'react'
-import gitHubData from '../../assets/github.json'
-import './github.scss'
-import MacWindow from './MacWindow'
+import React from "react";
+import gitHubData from "../../assets/Github.json";
+import "./github.scss";
+import MacWindow from "./MacWindow";
 
-const Gitcard = ({data = {id:1, image:"",title:"", description:"", tags:[], repoLink:"", demoLink:""}}) => {
-    return <div className='card'>
-
-        <img src={data.image} alt="" />
-
-        <h1>{data.title}</h1>
-
-        <p className='description'>{data.description}</p>
-
-        <div className='tags'>
-            {
-            data.tags.map(tag=><p className='tag'>{tag}</p>)
-            }  
-        </div>
-        <div className='urls'>
-            <a href={data.repoLink}>Repository</a>
-            {data.demoLink && <a href={data.demoLink}>Demo link</a>}
-        </div>
-    </div>
-}
-
-const Github = ({windowName, setwindowState}) => {
+const Gitcard = ({
+  data = {
+    id: 1,
+    image: "",
+    title: "",
+    description: "",
+    tags: [],
+    repoLink: "",
+    demoLink: "",
+  },
+}) => {
   return (
-    <MacWindow windowName={windowName} setwindowState={setwindowState} width='50vw' height='80vh' x='100' y='50'>
-        <div className='cards'>
-            {gitHubData.map(project =>{
-                return <Gitcard data={project}/>
-            })}
-        </div>
-    </MacWindow>
-  )
-}
+    <div className="card">
+      <img src={data.image} alt="" />
 
-export default Github
+      <h1>{data.title}</h1>
+
+      <p className="description">{data.description}</p>
+
+      <div className="tags">
+        {data.tags.map((tag) => (
+          <p className="tag">{tag}</p>
+        ))}
+      </div>
+      <div className="urls">
+        <a href={data.repoLink}>Repository</a>
+        {data.demoLink && <a href={data.demoLink}>Demo link</a>}
+      </div>
+    </div>
+  );
+};
+
+const Github = ({ windowName, setwindowState }) => {
+  return (
+    <MacWindow
+      windowName={windowName}
+      setwindowState={setwindowState}
+      width="50vw"
+      height="80vh"
+      x="100"
+      y="50"
+    >
+      <div className="cards">
+        {gitHubData.map((project) => {
+          return <Gitcard data={project} />;
+        })}
+      </div>
+    </MacWindow>
+  );
+};
+
+export default Github;
