@@ -3,52 +3,36 @@ import MacWindow from "./MacWindow";
 import Terminal from "react-console-emulator";
 import "./cli.scss";
 
-const Cli = ({windowName, setwindowState}) => {
-
+const Cli = ({ windowName, setwindowState }) => {
   const commands = {
-
-    help: {
+    details: {
       fn: () => `
 Available Commands:
 ------------------
-help        -> Show all commands
+details     -> Show all commands
 about       -> About me
 skills      -> My technical skills
 projects    -> My projects
 contact     -> Contact information
 github      -> GitHub profile
 linkedin    -> LinkedIn profile
-whoami     -> Who am I
 clear       -> Clear terminal
 `,
-    },
-
-    clear: {
-      fn: (helpers) => helpers.clear(),
-    },
-
-    whoami: {
-      fn: () => (
-        <span style={{ color: "#ffcc00" }}>
-          Soham Bangar - Full Stack Developer
-        </span>
-      ),
     },
 
     about: {
       fn: () => (
         <div>
-          <span style={{ color: "#00ff00" }}>
-            Hi 👋 I'm Soham Bangar
-          </span>
+          <span style={{ color: "#00ff00" }}>Hi 👋 I'm Soham Bangar</span>
           <br />
           <span style={{ color: "#00ffff" }}>
             Full-Stack Developer | Problem Solver
           </span>
-          <br /><br />
+          <br />
+          <br />
           <span>
-            I love building interactive web applications and turning ideas
-            into real-world products.
+            I love building interactive web applications and turning ideas into
+            real-world products.
           </span>
         </div>
       ),
@@ -58,15 +42,15 @@ clear       -> Clear terminal
       fn: () => (
         <div>
           <span style={{ color: "#00ff00" }}>Frontend</span>
-          <br />- HTML, CSS, JavaScript
+          <br />- HTML, CSS, Scss, JavaScript
           <br />- React, Tailwind CSS
-          <br /><br />
-
+          <br />
+          <br />
           <span style={{ color: "#00ff00" }}>Backend</span>
           <br />- Node.js, Express
           <br />- MongoDB, SQL
-          <br /><br />
-
+          <br />
+          <br />
           <span style={{ color: "#00ff00" }}>Tools</span>
           <br />- Git & GitHub
           <br />- Docker (Basics)
@@ -85,7 +69,8 @@ clear       -> Clear terminal
           3) Portfolio Website
           <br />
           4) Document Scanner App
-          <br /><br />
+          <br />
+          <br />
           More coming soon 🚀
         </div>
       ),
@@ -94,7 +79,7 @@ clear       -> Clear terminal
     contact: {
       fn: () => (
         <div>
-          Email: soham@example.com
+          Email: sohambangar189@gmail.com
           <br />
           Location: Maharashtra, India
         </div>
@@ -104,12 +89,12 @@ clear       -> Clear terminal
     github: {
       fn: () => (
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/SohambangarCODE"
           target="_blank"
           rel="noreferrer"
           style={{ color: "#58a6ff" }}
         >
-          https://github.com/yourusername
+          https://github.com/SohambangarCODE
         </a>
       ),
     },
@@ -117,12 +102,12 @@ clear       -> Clear terminal
     linkedin: {
       fn: () => (
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/soham-bangar-b8507834a/"
           target="_blank"
           rel="noreferrer"
           style={{ color: "#0a66c2" }}
         >
-          https://linkedin.com/in/yourusername
+          https://linkedin.com/in/SohamBangar
         </a>
       ),
     },
@@ -130,21 +115,19 @@ clear       -> Clear terminal
     echo: {
       fn: (...args) => args.join(" "),
     },
-
   };
 
   return (
     <MacWindow windowName={windowName} setwindowState={setwindowState}>
       <div className="cli-window">
         <Terminal
-          noDefaults={true}
           commands={commands}
           typingSpeed={40}
           welcomeMessage={`
 ╔══════════════════════════════════════╗
 ║   Welcome to Soham's Portfolio CLI   ║
 ╚══════════════════════════════════════╝
-Type 'help' to see available commands
+Type 'details' to see available commands
 `}
           promptLabel={"Soham@portfolio:~$"}
           promptLabelStyle={{ color: "#00ff00" }}
