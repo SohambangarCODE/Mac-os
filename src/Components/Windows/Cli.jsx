@@ -3,7 +3,7 @@ import MacWindow from "./MacWindow";
 import Terminal from "react-console-emulator";
 import "./cli.scss";
 
-const Cli = () => {
+const Cli = ({windowName, setwindowState}) => {
 
   const commands = {
 
@@ -134,7 +134,7 @@ clear       -> Clear terminal
   };
 
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} setwindowState={setwindowState}>
       <div className="cli-window">
         <Terminal
           noDefaults={true}

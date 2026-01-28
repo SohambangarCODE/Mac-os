@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atelierDuneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-const Note = () => {
+const Note = ({windowName, setwindowState}) => {
     const [markdown, setmarkdown] = useState(null)
     const getData = async() =>{
         const response = await fetch('/Note.txt')
@@ -16,7 +16,7 @@ const Note = () => {
         getData()
     },[])
   return (
-    <MacWindow height='60vh'>
+    <MacWindow windowName={windowName} setwindowState={setwindowState} height='60vh'>
         <div className='note-window'>
             {markdown ? <SyntaxHighlighter language='typescript' style={atelierDuneDark}>{markdown}</SyntaxHighlighter>:<p>Loading...</p>}
         </div>
