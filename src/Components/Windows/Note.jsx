@@ -16,7 +16,7 @@ const Note = () => {
         getData()
     },[])
   return (
-    <MacWindow>
+    <MacWindow height='60vh'>
         <div className='note-window'>
             {markdown ? <SyntaxHighlighter language='typescript' style={atelierDuneDark}>{markdown}</SyntaxHighlighter>:<p>Loading...</p>}
         </div>
