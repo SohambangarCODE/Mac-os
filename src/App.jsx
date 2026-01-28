@@ -7,6 +7,8 @@ import Github from "./Components/Windows/Github";
 import Note from "./Components/Windows/Note";
 import Resume from "./Components/Windows/Resume";
 import Spotify from "./Components/Windows/Spotify";
+import DeviceWarning from "./Components//Warning/DeviceWarning";
+
 
 function App() {
   const [windowState, setwindowState] = useState({
@@ -37,6 +39,9 @@ function App() {
       {windowState.cli && (
         <Cli windowName="cli" setwindowState={setwindowState} />
       )}
+      <DeviceWarning>
+      {/* YOUR EXISTING APP */}
+    </DeviceWarning>
     </main>
   );
 }

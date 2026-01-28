@@ -5,6 +5,10 @@
   height: 100%;
   color: #eadbdb;
 
+  
+  display: flex;              // ✅ ADD
+  flex-direction: column;     // ✅ ADD
+
   font-family:
     system-ui,
     -apple-system,
@@ -53,8 +57,9 @@
     }
   }
   .main-content{
-        height: 100%;
-    }
+  flex: 1;          // ✅ TAKE REMAINING SPACE
+  overflow: hidden;
+}
 
   *::-webkit-scrollbar{
     width: 8px;

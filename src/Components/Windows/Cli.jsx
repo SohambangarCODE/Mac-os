@@ -123,6 +123,10 @@ clear       -> Clear terminal
         <Terminal
           commands={commands}
           typingSpeed={40}
+          style={{
+            flex: 1,
+            overflowY: "scroll",
+          }}
           welcomeMessage={`
 ╔══════════════════════════════════════╗
 ║   Welcome to Soham's Portfolio CLI   ║
