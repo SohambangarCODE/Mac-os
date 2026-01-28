@@ -1,6 +1,6 @@
 import React from "react";
 import { Rnd } from "react-rnd";
-import "./Windows.scss";
+import "./windows.scss";
 
 const MacWindow = ({children,width="40vw",height="40vh",x=200,y=100,windowName, setwindowState}) => {
   return (
